@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.userappgui.appusers.HelloController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="289.0" minWidth="10.0" prefWidth="168.0" />
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="370.0" minWidth="10.0" prefWidth="325.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="370.0" minWidth="10.0" prefWidth="222.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="152.0" minHeight="0.0" prefHeight="19.0" valignment="TOP" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="348.0" minHeight="10.0" prefHeight="348.0" valignment="TOP" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="294.0" minHeight="10.0" prefHeight="44.0" valignment="CENTER" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label fx:id="label_city" prefHeight="43.0" prefWidth="220.0" text="Введите город:">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <TextField fx:id="txt_city" prefHeight="33.0" prefWidth="295.0" GridPane.columnIndex="1">
+         <font>
+            <Font size="17.0" />
+         </font></TextField>
+      <Button fx:id="btnCnangeCity" mnemonicParsing="false" onAction="#onChangeCity" prefHeight="81.0" prefWidth="149.0" text="Добавить город" GridPane.columnIndex="2" />
+      <TableView fx:id="tableView_city" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+        <columns>
+          <TableColumn fx:id="tableView_city_id_column" text="id" />
+          <TableColumn fx:id="tableView_city_name_column" prefWidth="415.0" text="Имя Города" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnImportExcel" mnemonicParsing="false" onAction="#onSaveExcel" prefHeight="50.0" prefWidth="151.0" style="-fx-background-color: #45b22c;" text=" Импорт в Excel" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+   </children>
+</GridPane>
